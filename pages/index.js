@@ -1,117 +1,138 @@
 import React, { useState } from "react";
-import "react-circular-progressbar/dist/styles.css";
 import CircularProgress from "../components/CircularProgress";
+
+const skills = [
+  { id: 1, label: "HTML", progress: 90 },
+  { id: 2, label: "CSS", progress: 95 },
+  { id: 3, label: "Js", progress: 70 },
+  { id: 4, label: "React", progress: 75 },
+  { id: 5, label: "Node", progress: 50 },
+];
 
 export default function Home() {
   const [english, setEnglish] = useState(60);
   const [bangla, setBangla] = useState(100);
   const [hindi, setHindi] = useState(40);
+
   return (
     <div className="max-w-[1440px] container w-full h-full mx-auto relative bg-[#1e1e28]">
       <div className="">
         {/* left sidebar */}
         <div
           className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_30px)] 
-        z-[999] relative shadow-[0px_3px_8px_0_rgba(15,15,20,0.2)]"
+        z-[999] relative shadow-[0px_3px_8px_0_rgba(15,15,20,0.2)] scroll-smooth scrollbar
+         
+          scrollbar-hide"
         >
-          <div className="">
-            <div className="profile_header p-[30px] h-[235px] w-full z-[9999] shadow-[0_1px_4px_0_rgba(15,15,20,0.1)]">
-              <div
-                className="profile_avatar w-[90px]
+          <div
+            className="profile_header p-[30px] h-[235px]  z-[9999] fixed w-[290px] min-w-[290px]
+            shadow-[0_1px_4px_0_rgba(15,15,20,0.1)]"
+          >
+            <div
+              className="profile_avatar w-[90px]
                h-[90px] mx-auto my-0 mb-[15px] rounded-full relative"
-              >
-                <div className="w-full h-full rounded-full z-0 relative profile_img">
-                  <img
-                    className="rounded-full w-full h-full object-cover"
-                    src="./assets/face-1.jpg"
-                    alt=""
-                  />
-                  <div
-                    className="w-[30px] h-[30px] text-center  expand 
-                  absolute  text-[11px] leading-[30px] opacity-0 z-10 self-center top-7 left-7 p-[10px]"
+            >
+              <div className="w-full h-full rounded-full z-0 relative profile_img">
+                <img
+                  className="rounded-full w-full h-full object-cover "
+                  src="./assets/profile.jpg"
+                  alt=""
+                />
+                <div
+                  className="w-[30px] h-[30px] text-center expand 
+                  absolute  text-[11px] leading-[30px]  z-10 self-center top-7 left-7 p-[10px]"
+                >
+                  <svg
+                    className="text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    fill="currentColor"
                   >
-                    <svg
-                      className="text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512"
-                      fill="currentColor"
-                    >
-                      <path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="z-10 pro_lamp_light">
-                  <div className="pro_available_light"></div>
+                    <path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z" />
+                  </svg>
                 </div>
               </div>
-              <div>
-                <h5 className="text-[#fafafc] text-center font-semibold text-[14px]">
-                  Jahid Hasan
-                </h5>
-              </div>
-              <div className="text-[11px] text-center font-[300] text-[#8c8c8e] mt-2">
-                Front-end Developer <br /> &quot;UI/UX&quot; Designer
+              <div className="z-10 pro_lamp_light">
+                <div className="pro_available_light"></div>
               </div>
             </div>
-            <div className="h-screen w-full overflow-hidden block absolute top-0">
-              <div
-                style={{
-                  transform: "translate3d(0px, 0px, 0px)",
-                  padding: "240px 0 50px",
-                }}
-              >
-                <div className="p-[15px]">
-                  <ul>
-                    <li className="mb-[5px] flex justify-between">
-                      <h5 className="text-[12px] font-normal text-[#fafafc]">
-                        Residence:
-                      </h5>
-                      <span className="text-[#8c8c8e] text-[12px] font-[300]">
-                        Bangladesh
-                      </span>
-                    </li>
-                    <li className="mb-[5px] flex justify-between">
-                      <h5 className="text-[12px] font-normal text-[#fafafc]">
-                        City:
-                      </h5>
-                      <span className="text-[#8c8c8e] text-[12px] font-[300]">
-                        Mymensingh
-                      </span>
-                    </li>
-                    <li className="mb-[5px] flex justify-between">
-                      <h5 className="text-[12px] font-normal text-[#fafafc]">
-                        Age:
-                      </h5>
-                      <span className="text-[#8c8c8e] text-[12px] font-[300]">
-                        21
-                      </span>
-                    </li>
-                  </ul>
-                  <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-4"></div>
-                </div>
-                <div className="p-[15px]">
-                  <div className="grid grid-cols-3">
-                    <div className="mb-[15px] text-center">
-                      <div className="mb-[15px] w-[65%]">
-                        <CircularProgress
-                          size={55}
-                          strokeWidth={4}
-                          color={"#FFC107"}
-                          percentage={english}
-                        />
-                      </div>
+
+            <div>
+              <h5 className="text-[#fafafc] text-center font-semibold text-[14px]">
+                Jahid Hasan
+              </h5>
+            </div>
+            <div className="text-[11px] text-center font-[300] text-[#8c8c8e] mt-2">
+              Front-end Developer <br /> &quot;UI/UX&quot; Designer
+            </div>
+          </div>
+
+          <div className="h-full w-full block absolute top-0">
+            <div
+              style={{
+                transform: "translate3d(0px, 0px, 0px)",
+                padding: "240px 0 50px",
+              }}
+            >
+              <div className="p-[15px]">
+                <ul>
+                  <li className="mb-[5px] flex justify-between">
+                    <h5 className="text-[12px] font-normal text-[#fafafc]">
+                      Residence:
+                    </h5>
+                    <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                      Bangladesh
+                    </span>
+                  </li>
+                  <li className="mb-[5px] flex justify-between">
+                    <h5 className="text-[12px] font-normal text-[#fafafc]">
+                      City:
+                    </h5>
+                    <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                      Mymensingh
+                    </span>
+                  </li>
+                  <li className="mb-[5px] flex justify-between">
+                    <h5 className="text-[12px] font-normal text-[#fafafc]">
+                      Age:
+                    </h5>
+                    <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                      21
+                    </span>
+                  </li>
+                </ul>
+                <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-4"></div>
+              </div>
+              <div className="p-[15px]">
+                <div className="grid grid-cols-3">
+                  <div className="mb-[15px] text-center flex  flex-col items-center ">
+                    <div className="mb-[15px] w-[65%]">
+                      <CircularProgress
+                        size={55}
+                        strokeWidth={4}
+                        color={"#FFC107"}
+                        percentage={bangla}
+                      />
                     </div>
-                    <div className="mb-[15px] text-center">
-                      <div className="mb-[15px] w-[65%]">
-                        <CircularProgress
-                          size={55}
-                          strokeWidth={4}
-                          color={"#FFC107"}
-                          percentage={bangla}
-                        />
-                      </div>
+                    <h6 className="text-[12px] font-normal text-[#fafafc]">
+                      Bangla
+                    </h6>
+                  </div>
+                  <div className="mb-[15px] text-center flex flex-col items-center">
+                    <div className="mb-[15px] w-[65%]">
+                      <CircularProgress
+                        size={55}
+                        strokeWidth={4}
+                        color={"#FFC107"}
+                        percentage={english}
+                      />
                     </div>
-                    <div className="mb-[15px] text-center">
+                    <h6 className="text-[12px] font-normal text-[#fafafc]">
+                      English
+                    </h6>
+                  </div>
+                  <div className="mb-[15px] text-center flex  flex-col items-center">
+                    <div className="mb-[15px] w-[65%]">
                       <CircularProgress
                         size={55}
                         strokeWidth={4}
@@ -119,12 +140,101 @@ export default function Home() {
                         percentage={hindi}
                       />
                     </div>
+                    <h6 className="text-[12px] font-normal text-[#fafafc]">
+                      Hindi
+                    </h6>
                   </div>
+                </div>
+                <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-4"></div>
+              </div>
+              <div className="p-[15px]">
+                {skills.map((skill) => (
+                  <div key={skill.id} className="progress_bar my-3">
+                    <label className="w-full text-[11px] text-[#8c8c8e] flex justify-between mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.progress}%</span>
+                    </label>
+
+                    <div class="w-full bg-gray-200 h-[5px] dark:bg-gray-700">
+                      <div
+                        class="bg-[#FFC107] h-[5px]"
+                        style={{ width: `${skill.progress}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+                <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-9"></div>
+                <ul className="mt-4">
+                  <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+                    <svg
+                      className="text-[#FFC107] w-3 h-3"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                    </svg>
+                    <span>Bootstrap, Materialize</span>
+                  </li>
+                  <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+                    <svg
+                      className="text-[#FFC107] w-3 h-3"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                    </svg>
+                    <span>Stylus, Sass, Less</span>
+                  </li>
+                  <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+                    <svg
+                      className="text-[#FFC107] w-3 h-3"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                    </svg>
+                    <span>Gulp, Webpack, Grunt</span>
+                  </li>
+                  <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+                    <svg
+                      className="text-[#FFC107] w-3 h-3"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                    </svg>
+                    <span>GIT knowledge</span>
+                  </li>
+                </ul>
+                <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-9"></div>
+
+                <div className="mt-4">
+                  <a
+                    href="/"
+                    className="text-[#8c8c8e] text-[10px] flex gap-2 items-center tracking-[1.5px]
+                   font-semibold inline-block uppercase"
+                  >
+                    Download
+                    <svg
+                      className="w-3 h-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="pro_ssocial">
+          <div className="pro_ssocial fixed bottom-3 w-[290px] min-w-[290px]">
+            <dir className="flex justify-between items-center w-full pro_ssocial_main px-[35px]">
               <a className="" href="/linkedin">
                 <svg
                   className="text-[#8c8c8e] w-3"
@@ -175,7 +285,7 @@ export default function Home() {
                   <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
                 </svg>
               </a>
-            </div>
+            </dir>
           </div>
         </div>
       </div>
