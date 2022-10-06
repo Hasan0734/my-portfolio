@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import "react-circular-progressbar/dist/styles.css";
+import CircularProgress from "../components/CircularProgress";
 
 export default function Home() {
+  const [english, setEnglish] = useState(60);
+  const [bangla, setBangla] = useState(100);
+  const [hindi, setHindi] = useState(40);
   return (
     <div className="max-w-[1440px] container w-full h-full mx-auto relative bg-[#1e1e28]">
       <div className="">
@@ -88,120 +93,31 @@ export default function Home() {
                   <div className="grid grid-cols-3">
                     <div className="mb-[15px] text-center">
                       <div className="mb-[15px] w-[65%]">
-                        <svg
-                          viewBox="0 0 100 100"
-                          style={{ display: "block", width: "100%" }}
-                        >
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#eee"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                          />
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#555"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                            style={{
-                              strokeDasharray: "292.273, 292.273",
-                              strokeDashoffset: 0,
-                            }}
-                          />
-                        </svg>
-                        <div
-                          class="text-[#8c8c8e] text-[12px] left-[45%]"
-                          style={{
-                            position: "absolute",
-                            left: "50%",
-                            top: "50%",
-                            padding: "0px",
-                            margin: "0px",
-                            transform: "translate(-50%, -50%)",
-                            color: "rgb(85, 85, 85)",
-                          }}
-                        >
-                          100
-                        </div>
+                        <CircularProgress
+                          size={55}
+                          strokeWidth={4}
+                          color={"#FFC107"}
+                          percentage={english}
+                        />
                       </div>
                     </div>
                     <div className="mb-[15px] text-center">
                       <div className="mb-[15px] w-[65%]">
-                        <svg
-                          viewBox="0 0 100 100"
-                          style={{ display: "block", width: "100%" }}
-                        >
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#eee"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                          />
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#555"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                            style={{
-                              strokeDasharray: "292.273, 292.273",
-                              strokeDashoffset: 0,
-                            }}
-                          />
-                        </svg>
-                        <div
-                          class="text-[#8c8c8e] text-[12px] left-[45%]"
-                          style={{
-                            position: "absolute",
-                            left: "50%",
-                            top: "50%",
-                            padding: "0px",
-                            margin: "0px",
-                            transform: "translate(-50%, -50%)",
-                            color: "rgb(85, 85, 85)",
-                          }}
-                        >
-                          100
-                        </div>
+                        <CircularProgress
+                          size={55}
+                          strokeWidth={4}
+                          color={"#FFC107"}
+                          percentage={bangla}
+                        />
                       </div>
                     </div>
                     <div className="mb-[15px] text-center">
-                      <div className="mb-[15px] w-[65%]">
-                        <svg
-                          viewBox="0 0 100 100"
-                          style={{ display: "block", width: "100%" }}
-                        >
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#eee"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                          />
-                          <path
-                            d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                            stroke="#555"
-                            strokeWidth={7}
-                            fillOpacity={0}
-                            style={{
-                              strokeDasharray: "292.273, 292.273",
-                              strokeDashoffset: 0,
-                            }}
-                          />
-                        </svg>
-                        <div
-                          class="text-[#8c8c8e] text-[12px] left-[45%]"
-                          style={{
-                            position: "absolute",
-                            left: "50%",
-                            top: "50%",
-                            padding: "0px",
-                            margin: "0px",
-                            transform: "translate(-50%, -50%)",
-                            color: "rgb(85, 85, 85)",
-                          }}
-                        >
-                          100
-                        </div>
-                      </div>
+                      <CircularProgress
+                        size={55}
+                        strokeWidth={4}
+                        color={"#FFC107"}
+                        percentage={hindi}
+                      />
                     </div>
                   </div>
                 </div>
