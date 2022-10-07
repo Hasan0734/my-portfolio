@@ -22,9 +22,8 @@ export default function Home() {
       <div className="flex ">
         {/* left sidebar */}
         <div
-          className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_30px)] 
+          className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_20px)] 
         z-[999] relative shadow-[0px_3px_8px_0_rgba(15,15,20,0.2)] scroll-smooth scrollbar
-         
           scrollbar-hide"
         >
           <div
@@ -225,7 +224,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pro_ssocial fixed bottom-3 w-[290px] min-w-[290px]">
+          <div className="pro_ssocial fixed bottom-1 w-[290px] min-w-[290px]">
             <dir className="flex justify-between items-center w-full pro_ssocial_main px-[35px]">
 
               <Link href="/linkedin">
