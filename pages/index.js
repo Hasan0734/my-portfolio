@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CircularProgress from "../components/CircularProgress";
+import LineProgress from "../components/LineProgress";
 
 const skills = [
   { id: 1, label: "HTML", progress: 90 },
@@ -16,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="max-w-[1440px] container w-full h-full mx-auto relative bg-[#1e1e28]">
-      <div className="">
+      <div className="flex ">
         {/* left sidebar */}
         <div
           className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_30px)] 
@@ -149,19 +150,7 @@ export default function Home() {
               </div>
               <div className="p-[15px]">
                 {skills.map((skill) => (
-                  <div key={skill.id} className="progress_bar my-3">
-                    <label className="w-full text-[11px] text-[#8c8c8e] flex justify-between mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.progress}%</span>
-                    </label>
-
-                    <div class="w-full bg-gray-200 h-[5px] dark:bg-gray-700">
-                      <div
-                        class="bg-[#FFC107] h-[5px]"
-                        style={{ width: `${skill.progress}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <LineProgress key={skill.id} skill={skill} />
                 ))}
                 <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-9"></div>
                 <ul className="mt-4">
@@ -286,6 +275,18 @@ export default function Home() {
                 </svg>
               </a>
             </dir>
+          </div>
+        </div>
+
+        <div className="p-10 w-full">
+          <div className=" h-[315px] w-full header_banner">
+            <div className="z-50">
+              <div className="banner_content p-10">
+                <h1 className="text-[#fafafc] text-[42px] font-bold">Discover my Amazing <br/> Art space!</h1>
+             
+                  <p>Code</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

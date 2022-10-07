@@ -7,10 +7,19 @@ export default function CircularProgress({
   color,
 }) {
   const [progress, setProgress] = useState(0);
+  const [percent, setPercent] = useState([]);
 
   useEffect(() => {
     setProgress(percentage);
-  }, [percentage]);
+
+    if (percent.length <= percentage) {
+      setTimeout(() => {
+        for (let i = 0; i < percentage; i++) {
+          setPercent([...percent, i]);
+        }
+      }, 1);
+    }
+  }, [percentage, percent]);
 
   const viewBox = `0 0 ${size} ${size}`;
   const radius = (size - strokeWidth) / 2;
@@ -36,7 +45,7 @@ export default function CircularProgress({
         transform={`rotate(-90 ${size / 2} ${size / 2})`}
         strokeDasharray={[dash, circumference - dash]}
         strokeLinecap={"round"}
-        style={{ transition: "all 0.5s" }}
+        style={{ transition: "all 0.3s" }}
       />
       <text
         fill="#8c8c8e"
@@ -46,7 +55,7 @@ export default function CircularProgress({
         dy="5px"
         textAnchor="middle"
       >
-        {`${progress}%`}
+        {`${percent.length - 1}%`}
       </text>
     </svg>
   );
