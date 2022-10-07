@@ -1,6 +1,8 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import CircularProgress from "../components/CircularProgress";
 import LineProgress from "../components/LineProgress";
+import MainContent from "../components/MainContent";
 
 const skills = [
   { id: 1, label: "HTML", progress: 90 },
@@ -202,21 +204,22 @@ export default function Home() {
                 <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-9"></div>
 
                 <div className="mt-4">
-                  <a
-                    href="/"
-                    className="text-[#8c8c8e] text-[10px] flex gap-2 items-center tracking-[1.5px]
+                  <Link href="/">
+                    <a
+                      className="text-[#8c8c8e] text-[10px] flex gap-2 items-center tracking-[1.5px]
                    font-semibold inline-block uppercase"
-                  >
-                    Download
-                    <svg
-                      className="w-3 h-3"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 512 512"
                     >
-                      <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
-                    </svg>
-                  </a>
+                      Download
+                      <svg
+                        className="w-3 h-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 512 512"
+                      >
+                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                      </svg>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -278,17 +281,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="p-10 w-full">
-          <div className=" h-[315px] w-full header_banner">
-            <div className="z-50">
-              <div className="banner_content p-10">
-                <h1 className="text-[#fafafc] text-[42px] font-bold">Discover my Amazing <br/> Art space!</h1>
-             
-                  <p>Code</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MainContent />
       </div>
     </div>
   );
