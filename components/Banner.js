@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-
 import { Typewriter } from "react-simple-typewriter";
+
 export default function Banner() {
   return (
     <>

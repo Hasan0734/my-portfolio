@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import MyServices from "./MyServices";
 import PricePlans from "./PricePlans";
+import Recommendations from "./Recommendations";
 import Statics from "./Statics";
 
 export default function MainContent() {
@@ -10,7 +11,8 @@ export default function MainContent() {
         <Banner />
         <Statics />
         <MyServices />
-        <PricePlans/>
+        <PricePlans />
+        <Recommendations/>
       </div>
     </>
   );
