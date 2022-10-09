@@ -35,12 +35,14 @@ export default function Recommendations() {
           loop={true}
           pagination={{
             clickable: true,
+            className: "pagination-button",
           }}
+          // autoplay={false}
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
           }}
-          navigation={true}
+          navigation={false}
           // onBeforeInit={(swiper) => {
           //   swiper.params.navigation.prevEl = navigatePrevRef.current;
           //   swiper.params.navigation.nextEl = navigateNextRef.current;
@@ -145,50 +147,15 @@ export default function Recommendations() {
               </div>
             </div>
           </SwiperSlide>
-          <div className="flex justify-between">
-            <div>hello</div>
-            <div className="flex gap-2">
-              <button
-                ref={navigatePrevRef}
-                onClick={handlePrev}
-                className="text-white cursor-pointer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </button>
-              <buttonsw
-                ref={navigateNextRef}
-                onClick={handleNext}
-                className="text-white cursor-pointer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </buttonsw>
-            </div>
+          <div className="flex gap-3 justify-end absolute bottom-0 right-0">
+            <div
+              onClick={handlePrev}
+              className="text-white cursor-pointer swiper_prev"
+            ></div>
+            <div
+              onClick={handleNext}
+              className="text-white cursor-pointer swiper_next"
+            ></div>
           </div>
         </Swiper>
       </div>

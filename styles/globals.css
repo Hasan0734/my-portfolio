@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -171,4 +172,44 @@ body {
   padding: 30px;
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+}
+
+
+.swiper_prev::after {
+  content: "prev";
+  font-family: 'swiper-icons';
+  font-weight: 900;
+  display: inline-block;
+  font-size: 12px;
+
+}
+
+.swiper_next::after {
+  content: "next";
+  font-family: 'swiper-icons';
+  font-weight: 900;
+  display: inline-block;
+  font-size: 12px;
+}
+
+
+.mySwiper .swiper-pagination {
+  text-align: left !important;
+    margin-top: 5px;
+}
+
+.mySwiper .swiper-pagination .swiper-pagination-bullet {
+  background: #8c8c8e !important;
+  width: 8px !important;
+  border-radius: 5px !important;
+  opacity: 0.5 !important;
+  height: 4px !important;
+  transition: 0.4s ease-in-out;
+  margin-right: 10px;
+}
+
+.mySwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ffc107 !important;
+  opacity: 1 !important;
+  width: 20px !important;
 }
