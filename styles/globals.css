@@ -194,7 +194,7 @@ body {
 
 .mySwiper .swiper-pagination {
   text-align: left !important;
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .mySwiper .swiper-pagination .swiper-pagination-bullet {
@@ -213,3 +213,25 @@ body {
   width: 20px !important;
 }
 
+.work_card img {
+  transition: all 0.6s;
+}
+
+.work_card:hover img {
+  scale: 1.2;
+}
+
+.work_card .links {
+  visibility: visible;
+  opacity: 0;
+  transition: all 0.6s;
+  height: 0;
+  bottom: 0;
+}
+
+.work_card:hover .links {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+  height: 100%;
+}
