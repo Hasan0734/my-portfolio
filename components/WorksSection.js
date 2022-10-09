@@ -50,7 +50,7 @@ const WorksSection = () => {
           </li>
         </ul>
       </div>
-      <div className="mt-4 gap-x-7 gap-y-5  grid grid-cols-3">
+      <div className="mt-4 gap-x-7 gap-y-5  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         <div className="rounded-md overflow-hidden shadow-[0px_15px_20px_0px_rgba(0,0,0,0.68)] work_card cursor-pointer">
           <div className="relative h-[240px] overflow-hidden">
             <img
@@ -238,6 +238,9 @@ const WorksSection = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="text-center mt-8">
+        <h3 className="text-[#fafafc] textt-[12px] font-normal">Work History</h3>
       </div>
     </div>
   );

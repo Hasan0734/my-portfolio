@@ -1,4 +1,6 @@
 import Banner from "./Banner";
+import ContactInformation from "./ContactInformation";
+import Education from "./Education";
 import MyServices from "./MyServices";
 import PricePlans from "./PricePlans";
 import Recommendations from "./Recommendations";
@@ -14,7 +16,9 @@ export default function MainContent() {
         <MyServices />
         <PricePlans />
         <Recommendations />
-        <WorksSection/>
+        <WorksSection />
+        <Education />
+        <ContactInformation/>
       </div>
     </>
   );
