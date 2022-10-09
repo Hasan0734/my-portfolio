@@ -6,7 +6,7 @@ export default function PricePlans() {
     <>
       <div className="mt-6">
         <h3 className="text-[#fafafc] textt-[12px] font-normal">Price Plans</h3>
-        <div className="grid grid-cols-3 gap-7 mt-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-7 mt-6">
           <div className="my-service-box rounded-sm">
             <div className="p-6 pb-3 text-center">
               <h2 className="text-[14px] font-semibold text-[#fafafc] mb-6">

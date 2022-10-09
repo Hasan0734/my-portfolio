@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import SwiperNext from "./SwiperNext";
 import SwiperPrev from "./SwiperPrev";
+import ActiveStar from "./ActiveStar";
+import InactiveStar from "./InactiveStar";
 
 export default function Recommendations() {
   const navigatePrevRef = useRef(null);
@@ -13,6 +15,7 @@ export default function Recommendations() {
   const sliderRef = useRef(null);
 
   const handlePrev = useCallback(() => {
+    console.log("hello");
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
   }, []);
@@ -50,10 +53,24 @@ export default function Recommendations() {
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
           speed={2500}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+          }}
         >
           <SwiperSlide>
             <div className="py-10">
-              <div className="recommendation">
+              <div className="recommendation p-5 lg:p-[30px]">
                 <div className="relative">
                   <div>
                     <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
@@ -79,13 +96,22 @@ export default function Recommendations() {
                     distinctio quaerat excepturi recusandae, assumenda nostrum
                     ullam perspiciatis in maiores ipsum odio odit?
                   </p>
+                  <div>
+                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                      <InactiveStar />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="py-10">
-              <div className="recommendation">
+              <div className="recommendation p-5 lg:p-[30px]">
                 <div className="relative">
                   <div>
                     <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
@@ -111,13 +137,22 @@ export default function Recommendations() {
                     distinctio quaerat excepturi recusandae, assumenda nostrum
                     ullam perspiciatis in maiores ipsum odio odit?
                   </p>
+                  <div>
+                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="py-10">
-              <div className="recommendation">
+              <div className="recommendation p-5 lg:p-[30px]">
                 <div className="relative">
                   <div>
                     <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
@@ -143,6 +178,15 @@ export default function Recommendations() {
                     distinctio quaerat excepturi recusandae, assumenda nostrum
                     ullam perspiciatis in maiores ipsum odio odit?
                   </p>
+                  <div>
+                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
+                      <ActiveStar />
+                      <ActiveStar />
+                      <ActiveStar />
+                      <InactiveStar />
+                      <InactiveStar />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

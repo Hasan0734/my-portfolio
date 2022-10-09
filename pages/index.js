@@ -22,7 +22,7 @@ export default function Home() {
       <div className="flex ">
         {/* left sidebar */}
         <div
-          className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_20px)] 
+          className="bg-[#20202a] w-[290px] min-w-[290px] h-[calc(100vh_-_20px)] hidden md:block
         z-[999] relative shadow-[0px_3px_8px_0_rgba(15,15,20,0.2)] scroll-smooth scrollbar
           scrollbar-hide"
         >

@@ -33,7 +33,7 @@ export default function MyServices() {
   return (
     <div>
       <h3 className="text-[#fafafc] textt-[12px] font-normal">My Services</h3>
-      <div className="grid grid-cols-3 gap-7 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-4">
         {services.map((service) => (
           <div key={service.id} className="my-service-box rounded-sm">
             <div className="p-[30px]">
