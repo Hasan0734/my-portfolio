@@ -6,12 +6,12 @@ export default function Banner() {
   return (
     <>
       <div className=" max-h-[315px] w-full header_banner">
-        <div className="z-50 flex rid-cols-2">
-          <div className="banner_content p-5 md:p-10 pr-2 w-full">
+        <div className="z-50 flex grid-cols-2 grid-flow-col">
+          <div className="banner_content py-5 pl-5 md:pl-10 pr-5 md:pr-6 md:py-10 pr-2 w-full">
             <h1 className="text-[#fafafc] hidden lg:block text-[36px] font-bold">
               Discover my Amazing <br /> Art Space!
             </h1>
-            <h1 className="text-[#fafafc]  text-[20px] font-bold">
+            <h1 className="text-[#fafafc]  text-[20px] font-bold block lg:hidden">
               Discover my Amazing Art Space!
             </h1>
 
