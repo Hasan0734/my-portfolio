@@ -235,3 +235,127 @@ body {
   bottom: 0;
   height: 100%;
 }
+
+
+.send_message {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.send_message .input_field {
+  background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+  border: none;
+  padding-right: 15px;
+  padding-left: 65px;
+  box-shadow: inset 0 1px 4px 0 rgb(15 15 20/10%);
+  transition: 0.4s ease-in-out;
+  height: 50px;
+}
+
+.send_message .input_label {
+  text-align: center;
+  color: #8c8c8e;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #20202a;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+  cursor: text;
+}
+
+.send_message .input_field:focus {
+  outline: none;
+}
+
+.send_message .input_field:focus+.input_label {
+  background: #FFC107;
+  color: #20202a;
+}
+
+.send_message textarea {
+  background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+  border: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-shadow: inset 0 1px 4px 0 rgb(15 15 20/10%);
+  transition: 0.4s ease-in-out;
+  height: 150px;
+  border-left: solid 50px #20202a;
+
+}
+
+.send_message .message {
+  text-align: center;
+  color: #8c8c8e;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #20202a;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+  cursor: text;
+}
+
+.send_message textarea:focus {
+  outline: none;
+  border-left: solid 50px #ffc107;
+}
+
+.send_message textarea:focus+.message {
+  background: #FFC107;
+  color: #20202a;
+}
+
+.message_success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 150px;
+  transform: scale(0);
+  text-transform: uppercase;
+  color: #fafafc;
+  background: #20202a;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  font-size: 11px;
+  padding: 15px 35px;
+  margin: 0;
+  transition: 0.4s ease-in-out;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  padding: 17px 30px 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  box-shadow: 0 1px 4px 0 rgb(15 15 20/10%);
+  font-size: 11px;
+  color: #8c8c8e;
+  transition: 0.55s ease-in-out;
+  z-index: 9;
+}

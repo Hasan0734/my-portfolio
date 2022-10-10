@@ -1,6 +1,9 @@
 import Banner from "./Banner";
+import Branding from "./Branding";
 import ContactInformation from "./ContactInformation";
 import Education from "./Education";
+import Footer from "./Footer";
+import GetInTouch from "./GetInTouch";
 import MyServices from "./MyServices";
 import PricePlans from "./PricePlans";
 import Recommendations from "./Recommendations";
@@ -10,7 +13,7 @@ import WorksSection from "./WorksSection";
 export default function MainContent() {
   return (
     <>
-      <div className="p-4 md:p-10 w-full overflow-scroll  scrollbar   h-[calc(100vh_-_30px)]  ">
+      <div className="px-4 pt-4 md:px-10 md:pt-10 -pb-2 w-full overflow-scroll  scrollbar   h-[calc(100vh_-_21px)]  ">
         <Banner />
         <Statics />
         <MyServices />
@@ -18,7 +21,10 @@ export default function MainContent() {
         <Recommendations />
         <WorksSection />
         <Education />
-        <ContactInformation/>
+        <ContactInformation />
+        <GetInTouch />
+        <Branding />
+        <Footer/>
       </div>
     </>
   );
