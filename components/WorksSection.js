@@ -239,9 +239,6 @@ const WorksSection = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8">
-        <h3 className="text-[#fafafc] textt-[12px] font-normal">Work History</h3>
-      </div>
     </div>
   );
 };
