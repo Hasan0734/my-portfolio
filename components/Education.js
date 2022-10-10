@@ -2,7 +2,8 @@ import React from 'react';
 
 const Education = () => {
     return (
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-3">
+        {/* education history */}
         <div>
           <h3 className="text-[#fafafc] textt-[12px] font-normal">Education</h3>
           <div className="timeline_area">
@@ -10,7 +11,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section
@@ -57,7 +58,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section
@@ -104,7 +105,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section
@@ -149,6 +150,8 @@ const Education = () => {
             </div>
           </div>
         </div>
+
+        {/* works history */}
         <div>
           <h3 className="text-[#fafafc] textt-[12px] font-normal">
             Work History
@@ -158,7 +161,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section
@@ -205,7 +208,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section
@@ -252,7 +255,7 @@ const Education = () => {
               <div className="timeline-mark-light"></div>
               <div className="timeline-mark"></div>
               <div className="education mt-4 timeline_card">
-                <div className="flex justify-between">
+                <div className="flex md:flex-row flex-col justify-between">
                   <div>
                     <h5 className="text-[14px] font-semibold text-[#fafafc]">
                       Title of Section

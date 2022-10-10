@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mb-[10px]">© {new Date().getFullYear()} Jahid Hasan</div>
+    <footer className="mb-[75px] md:mb-4">
+      <div className="">© {new Date().getFullYear()} Jahid Hasan</div>
     </footer>
   );
 }

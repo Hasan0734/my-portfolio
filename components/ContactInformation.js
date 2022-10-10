@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactInformation = () => {
   return (
-    <div className="mt-6">
+    <div className="mt-6 px-3">
       <h3 className="text-[#fafafc] textt-[12px] font-normal">
         Contact Information
       </h3>

@@ -3,9 +3,9 @@ import React, { useState } from "react";
 export default function GetInTouch() {
   const [isTrue, setIsTrue] = useState(false);
   return (
-    <div className="mt-6">
+    <div className="mt-6 px-3">
       <h3 className="text-[#fafafc] textt-[12px] font-normal">Get in touch</h3>
-      <div className="mt-4 send_message">
+      <div className="mt-4 send_message p-[20px] md:p-[30px]">
         <form action="">
           <div className="relative mb-[30px]">
             <input

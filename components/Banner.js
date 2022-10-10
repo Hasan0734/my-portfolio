@@ -7,15 +7,15 @@ export default function Banner() {
     <>
       <div className=" max-h-[315px] w-full header_banner">
         <div className="z-50 flex grid-cols-2 grid-flow-col">
-          <div className="banner_content py-5 pl-5 md:pl-10 pr-5 md:pr-6 md:py-10 pr-2 w-full">
-            <h1 className="text-[#fafafc] hidden lg:block text-[36px] font-bold">
+          <div className="banner_content py-5 pl-5 md:pl-5 pr-5 md:pr-5 md:py-10  w-full">
+            <h1 className="text-[#fafafc] text-[36px] font-bold lg:text-start text-center">
               Discover my Amazing <br /> Art Space!
             </h1>
-            <h1 className="text-[#fafafc]  text-[20px] font-bold block lg:hidden">
-              Discover my Amazing Art Space!
-            </h1>
+            {/* <h1 className="text-[#fafafc]  text-[24px] font-bold block lg:hidden text-center">
+              Discover my Amazing <br/> Art Space!
+            </h1> */}
 
-            <p className="text-white font-normal text-[8px] md:text-[14px] tracking-[2.2px] mt-3">
+            <p className="text-white font-normal text-[14px] tracking-[2.2px] mt-3 text-center lg:text-start">
               &lt;<span className="text-[#FFC107]">code</span>&gt;{" "}
               <span>I build </span>
               <Typewriter
@@ -28,13 +28,13 @@ export default function Banner() {
                 loop
                 cursor
                 cursorStyle=" "
-                typeSpeed={80}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                typeSpeed={90}
+                deleteSpeed={60}
+                delaySpeed={2000}
               />
               &lt;/<span className="text-[#FFC107]">code</span>&gt;
             </p>
-            <div className="mt-10 ">
+            <div className="mt-10 flex flex-col md:flex-row justify-center md:justify-start items-center">
               <Link href="/">
                 <a
                   className="bg-[#FFC107] text-[#20202a] px-3 md:px-7 py-2 md:py-[12px] rounded-sm uppercase
@@ -45,7 +45,7 @@ export default function Banner() {
               </Link>
               <Link href="/">
                 <a
-                  className=" text-[#fcfcfc] px-3 md:px-7 py-[12px] mt-6 rounded-sm uppercase
+                  className=" text-[#fcfcfc] px-3 md:px-7 py-[12px] rounded-sm uppercase
               tracking-[1.5px] leading-6 text-[12px] font-semibold"
                 >
                   Hire me &gt;

@@ -25,7 +25,7 @@ export default function Recommendations() {
   }, []);
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 px-3">
       <h3 className="text-[#fafafc] textt-[12px] font-normal">
         Recommendations
       </h3>
