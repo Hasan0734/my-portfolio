@@ -7,7 +7,7 @@ const ContactInformation = () => {
         Contact Information
       </h3>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div className="bg-gradient-to-r from-[#2d2d3a78] to-[#2b2b3a99] p-[30px]">
+        <div className="contact_card p-[30px]">
           <ul>
             <li className="flex justify-between mb-2">
               <span className="text-[#fafafc] text-[12px] font-normal">
@@ -35,7 +35,7 @@ const ContactInformation = () => {
             </li>
           </ul>
         </div>
-        <div className="bg-gradient-to-r from-[#2d2d3a78] to-[#2b2b3a99] p-[30px]">
+        <div className="contact_card p-[30px]">
           <ul>
             <li className="flex justify-between mb-2">
               <span className="text-[#fafafc] text-[12px] font-normal">
@@ -63,7 +63,7 @@ const ContactInformation = () => {
             </li>
           </ul>
         </div>
-        <div className="bg-gradient-to-r from-[#2d2d3a78] to-[#2b2b3a99] p-[30px]">
+        <div className="contact_card p-[30px]">
           <ul>
             <li className="flex justify-between mb-2">
               <span className="text-[#fafafc] text-[12px] font-normal">

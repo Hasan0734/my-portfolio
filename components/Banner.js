@@ -6,9 +6,9 @@ export default function Banner() {
   return (
     <>
       <div className=" max-h-[315px] w-full header_banner">
-        <div className="z-50 flex grid-cols-2 grid-flow-col">
-          <div className="banner_content py-5 pl-5 md:pl-5 pr-5 md:pr-5 md:py-10  w-full">
-            <h1 className="text-[#fafafc] text-[36px] font-bold lg:text-start text-center">
+        <div className="z-50 flex">
+          <div className="banner_content py-5 pl-5 md:pl-10 pr-5 md:pr-5 md:py-10  w-full">
+            <h1 className="text-[#fafafc] text-[44px] font-bold lg:text-start text-center">
               Discover my Amazing <br /> Art Space!
             </h1>
             {/* <h1 className="text-[#fafafc]  text-[24px] font-bold block lg:hidden text-center">
@@ -53,8 +53,12 @@ export default function Banner() {
               </Link>
             </div>
           </div>
-          <div className="w-full hidden xl:block">
-            <img className="w-[68%] -mt-[37px]" src="/assets/face-2.png" alt="" />
+          <div className="hidden xl:block w-[68%]">
+            <img
+              className="w-[84.5%] -mt-[37px]"
+              src="/assets/face-2.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

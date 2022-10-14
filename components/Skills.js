@@ -18,7 +18,7 @@ export default function Skills() {
       const [hindi, setHindi] = useState(40);
   return (
     <>
-      <div className="h-full w-full block absolute top-0">
+      <div className="h-full w-full block absolute top-0 duration-200">
         <div
           style={{
             transform: "translate3d(0px, 0px, 0px)",

@@ -4,7 +4,7 @@ import React from 'react'
 export default function SidebarFooter() {
   return (
     <>
-      <div className="pro_ssocial fixed bottom-[18px] w-[290px] min-w-[290px]">
+      <div className="pro_ssocial fixed bottom-0 lg:bottom-[18px] w-[290px] min-w-[290px]">
         <div className="flex justify-between items-center w-full pro_ssocial_main px-[35px]">
           <Link href="/linkedin">
             <a className="">
