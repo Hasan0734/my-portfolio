@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-export default function GetInTouch() {
+export default function GetInTouch({theme}) {
   const [isTrue, setIsTrue] = useState(false);
   return (
     <div className="mt-6 px-3">
-      <h3 className="text-[#fafafc] textt-[12px] font-normal">Get in touch</h3>
-      <div className="mt-4 send_message p-[20px] md:p-[30px]">
+      <h3 className="dark:text-[#fafafc] text-[#20202a] textt-[12px] font-semibold">
+        Get in touch
+      </h3>
+      <div
+        className={`mt-4 ${
+          theme === "light" ? "send_message_bg_light" : "send_message_bg"
+        } send_message p-[20px] md:p-[30px]`}
+      >
         <form action="">
           <div className="relative mb-[30px]">
             <input
@@ -78,7 +84,7 @@ export default function GetInTouch() {
             {!isTrue && (
               <button
                 onClick={() => setIsTrue(true)}
-                className="px-8 py-3 bg-[#ffc107] text-[12px] font-semibold tracking-wide uppercase"
+                className="px-8 py-3 dark:bg-[#ffc107] bg-pink-500 dark:text-black text-white text-[12px] font-semibold tracking-wide uppercase"
                 type="submit"
               >
                 Send Message

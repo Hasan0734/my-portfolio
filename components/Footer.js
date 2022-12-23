@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer({theme}) {
   return (
-    <footer className="mb-[60px] md:mb-4">
+    <footer className={`${theme === "light" ? "footer_bg_light" : "footer_bg"} mb-[60px] md:mb-4`}>
       <div className="">© {new Date().getFullYear()} Jahid Hasan</div>
     </footer>
   );

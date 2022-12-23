@@ -12,10 +12,10 @@ export default function Statics() {
       <div className="py-8 px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-2">
         {projects.map((project) => (
           <div key={project.id} className="flex items-center gap-3">
-            <h4 className="text-[#FFC107] text-[22px] font-semibold leading-7">
+            <h4 className="text-pink-600 dark:text-[#FFC107] text-[22px] font-semibold leading-7">
               <CountUp end={project.number} duration={1} /> +
             </h4>
-            <h5 className="text-[#fafafc] text-[12px] font-normal">
+            <h5 className="text-[#20202a] dark:text-[#fafafc] text-[12px] font-normal">
               {project.name}
             </h5>
           </div>

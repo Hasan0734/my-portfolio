@@ -1,15 +1,19 @@
-import Link from 'next/link';
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-export default function SidebarFooter() {
+export default function SidebarFooter({ theme }) {
   return (
     <>
-      <div className="pro_ssocial fixed bottom-0 lg:bottom-[18px] w-[290px] min-w-[290px]">
-        <div className="flex justify-between items-center w-full pro_ssocial_main px-[35px]">
+      <div className="pro_social fixed bottom-0 lg:bottom-[19px] w-[290px] min-w-[290px]">
+        <div
+          className={`flex justify-between items-center w-full ${
+            theme === "light" ? "pro_social_main_light" : "pro_social_main"
+          } px-[35px]`}
+        >
           <Link href="/linkedin">
             <a className="">
               <svg
-                className="text-[#8c8c8e] w-3"
+                className="dark:text-[#8c8c8e] text-pink-600 w-3"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -22,7 +26,7 @@ export default function SidebarFooter() {
           <Link href="/dribble">
             <a>
               <svg
-                className="text-[#8c8c8e] w-3"
+                className="dark:text-[#8c8c8e] text-pink-600 w-3"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -35,7 +39,7 @@ export default function SidebarFooter() {
             <a>
               <svg
                 fill="currentColor"
-                className="text-[#8c8c8e] w-3"
+                className="dark:text-[#8c8c8e] text-pink-600 w-3"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
               >
@@ -47,7 +51,7 @@ export default function SidebarFooter() {
             <a>
               <svg
                 fill="currentColor"
-                className="text-[#8c8c8e] w-3"
+                className="dark:text-[#8c8c8e] text-pink-600 w-3"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
               >
@@ -59,7 +63,7 @@ export default function SidebarFooter() {
             <a>
               <svg
                 fill="currentColor"
-                className="text-[#8c8c8e] w-3"
+                className="dark:text-[#8c8c8e] text-pink-600 w-3"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
               >

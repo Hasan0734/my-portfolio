@@ -29,22 +29,29 @@ const services = [
   },
 ];
 
-export default function MyServices() {
+export default function MyServices({theme}) {
   return (
     <div className="px-3">
-      <h3 className="text-[#fafafc] textt-[12px] font-normal">My Services</h3>
+      <h3 className="dark:text-[#fafafc] text-[#20202a] textt-[12px] font-semibold">
+        My Services
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-4">
         {services.map((service) => (
-          <div key={service.id} className="my-service-box rounded-sm">
+          <div
+            key={service.id}
+            className={`${
+              theme === "light" ? "my-service-box-light" : "my-service-box"
+            } rounded-sm`}
+          >
             <div className="p-[30px]">
-              <h3 className="text-[#fafafc] text-[12px] font-normal tracking-wide">
+              <h3 className="dark:text-[#fafafc] text-[#20202a] text-[12px] font-normal tracking-wide">
                 {service.title}
               </h3>
-              <p className="text-[12px] font-[300] text-[#8c8c8e] mt-3 mb-3 text-justify">
+              <p className="text-[12px] font-[300] dark:text-[#8c8c8e]  text-[#20202a] mt-3 mb-3 text-justify">
                 {service.body}
               </p>
               <Link href="/order-now">
-                <a className="text-[#FFC107] text-[10px] font-semibold uppercase tracking-[1.5px]">
+                <a className="dark:text-[#FFC107] text-pink-500 text-[10px] font-semibold uppercase tracking-[1.5px]">
                   Order Now &gt;
                 </a>
               </Link>

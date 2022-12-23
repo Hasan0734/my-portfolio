@@ -21,13 +21,13 @@ export default function LineProgress({ skill }) {
       <div className="progress_bar my-3">
         <label className="w-full text-[11px] text-[#8c8c8e] flex justify-between mb-1">
           <span>{skill.label}</span>
-          <span >{percent.length - 1}%</span>
+          <span>{percent.length - 1}%</span>
         </label>
 
-        <div className="w-full bg-gray-200 h-[5px] dark:bg-gray-700">
+        <div className="w-full bg-pink-200 h-[5px] dark:bg-gray-700">
           <div
-            className="bg-[#FFC107] h-[5px]"
-            style={{ width: `${progress}%`, transition: 'all 0.5s'  }}
+            className="dark:bg-[#FFC107] bg-[#ff14a5] h-[5px]"
+            style={{ width: `${progress}%`, transition: "all 0.5s" }}
           ></div>
         </div>
       </div>

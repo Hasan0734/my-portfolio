@@ -12,7 +12,7 @@ const skills = [
   { id: 4, label: "React", progress: 75 },
   { id: 5, label: "Node", progress: 50 },
 ];
-export default function Skills() {
+export default function Skills({theme}) {
       const [english, setEnglish] = useState(60);
       const [bangla, setBangla] = useState(100);
       const [hindi, setHindi] = useState(40);
@@ -25,33 +25,37 @@ export default function Skills() {
             padding: "240px 0 50px",
           }}
         >
+          {/* locations */}
           <div className="p-[15px]">
             <ul>
               <li className="mb-[5px] flex justify-between">
-                <h5 className="text-[12px] font-normal text-[#fafafc]">
+                <h5 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
                   Residence:
                 </h5>
-                <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                <span className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300]">
                   Bangladesh
                 </span>
               </li>
               <li className="mb-[5px] flex justify-between">
-                <h5 className="text-[12px] font-normal text-[#fafafc]">
+                <h5 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
                   City:
                 </h5>
-                <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                <span className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300]">
                   Mymensingh
                 </span>
               </li>
               <li className="mb-[5px] flex justify-between">
-                <h5 className="text-[12px] font-normal text-[#fafafc]">Age:</h5>
-                <span className="text-[#8c8c8e] text-[12px] font-[300]">
+                <h5 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
+                  Age:
+                </h5>
+                <span className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300]">
                   21
                 </span>
               </li>
             </ul>
             <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-4"></div>
           </div>
+          {/* languages skills */}
           <div className="p-[15px]">
             <div className="grid grid-cols-3">
               <div className="mb-[15px] text-center flex  flex-col items-center ">
@@ -59,11 +63,11 @@ export default function Skills() {
                   <CircularProgress
                     size={55}
                     strokeWidth={4}
-                    color={"#FFC107"}
+                    color={theme === "light" ? "#ff14a5" : "#FFC107"}
                     percentage={bangla}
                   />
                 </div>
-                <h6 className="text-[12px] font-normal text-[#fafafc]">
+                <h6 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
                   Bangla
                 </h6>
               </div>
@@ -72,11 +76,11 @@ export default function Skills() {
                   <CircularProgress
                     size={55}
                     strokeWidth={4}
-                    color={"#FFC107"}
+                    color={theme === "light" ? "#ff14a5" : "#FFC107"}
                     percentage={english}
                   />
                 </div>
-                <h6 className="text-[12px] font-normal text-[#fafafc]">
+                <h6 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
                   English
                 </h6>
               </div>
@@ -85,26 +89,28 @@ export default function Skills() {
                   <CircularProgress
                     size={55}
                     strokeWidth={4}
-                    color={"#FFC107"}
+                    color={theme === "light" ? "#ff14a5" : "#FFC107"}
                     percentage={hindi}
                   />
                 </div>
-                <h6 className="text-[12px] font-normal text-[#fafafc]">
+                <h6 className="text-[12px] font-normal dark:text-[#fafafc] text-[#20202a]">
                   Hindi
                 </h6>
               </div>
             </div>
             <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-4"></div>
           </div>
+
+          {/* Line skills */}
           <div className="p-[15px]">
             {skills.map((skill) => (
-              <LineProgress key={skill.id} skill={skill} />
+              <LineProgress theme={theme} key={skill.id} skill={skill} />
             ))}
             <div className="bg-[#646466] w-full h-[1px] opacity-[0.3] mt-9"></div>
             <ul className="mt-4">
-              <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+              <li className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300] flex gap-2 items-center">
                 <svg
-                  className="text-[#FFC107] w-3 h-3"
+                  className="dark:text-[#FFC107] text-pink-600 w-3 h-3"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -113,9 +119,9 @@ export default function Skills() {
                 </svg>
                 <span>Bootstrap, Materialize</span>
               </li>
-              <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+              <li className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300] flex gap-2 items-center">
                 <svg
-                  className="text-[#FFC107] w-3 h-3"
+                  className="dark:text-[#FFC107] text-pink-600 w-3 h-3"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -124,9 +130,9 @@ export default function Skills() {
                 </svg>
                 <span>Stylus, Sass, Less</span>
               </li>
-              <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+              <li className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300] flex gap-2 items-center">
                 <svg
-                  className="text-[#FFC107] w-3 h-3"
+                  className="dark:text-[#FFC107] text-pink-600 w-3 h-3"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -135,9 +141,9 @@ export default function Skills() {
                 </svg>
                 <span>Gulp, Webpack, Grunt</span>
               </li>
-              <li className="text-[#8c8c8e] text-[12px] font-[300] flex gap-2 items-center">
+              <li className="dark:text-[#8c8c8e] text-[#20202a] text-[12px] font-[300] flex gap-2 items-center">
                 <svg
-                  className="text-[#FFC107] w-3 h-3"
+                  className="dark:text-[#FFC107] text-pink-600 w-3 h-3"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -152,7 +158,7 @@ export default function Skills() {
             <div className="mt-4">
               <Link href="/">
                 <a
-                  className="text-[#8c8c8e] text-[10px] flex gap-2 items-center tracking-[1.5px]
+                  className="dark:text-[#8c8c8e] text-[#20202a] text-[10px] flex gap-2 items-center tracking-[1.5px]
                    font-semibold inline-block uppercase"
                 >
                   Download

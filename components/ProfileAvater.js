@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import ThemeControll from "./ThemeControll";
 
-export default function ProfileAvater({setToggle, toggle}) {
+export default function ProfileAvater({ setToggle, toggle, theme }) {
   return (
     <>
       <div
-        className="profile_header p-[30px] h-[235px] z-[9999] fixed w-[290px] min-w-[290px]
-            shadow-[0_1px_4px_0_rgba(15,15,20,0.1)]"
+        className={`  ${
+          theme === "light" ? "profile_light_header" : "profile_header"
+        }  p-[30px] h-[235px] z-[9999] fixed w-[290px] min-w-[290px]
+            shadow-[0_1px_4px_0_rgba(15,15,20,0.1)]`}
       >
         <div className="relative block lg:hidden">
           <div
@@ -24,6 +27,9 @@ export default function ProfileAvater({setToggle, toggle}) {
             </svg>
           </div>
         </div>
+        <ThemeControll />
+
+        {/* profile image */}
         <div
           className="profile_avatar w-[90px]
                h-[90px] mx-auto my-0 mb-[15px] rounded-full relative"
@@ -52,13 +58,13 @@ export default function ProfileAvater({setToggle, toggle}) {
             <div className="pro_available_light"></div>
           </div>
         </div>
-
+        {/* profile title */}
         <div>
-          <h5 className="text-[#fafafc] text-center font-semibold text-[14px]">
+          <h5 className="dark:text-[#fafafc] text-[#20202a] text-center font-semibold text-[14px]">
             Jahid Hasan
           </h5>
         </div>
-        <div className="text-[11px] text-center font-[300] text-[#8c8c8e] mt-2">
+        <div className="text-[11px] text-center font-[300] dark:text-[#8c8c8e] text-gray-800 mt-2">
           Front-end Developer <br /> &quot;UI/UX&quot; Designer
         </div>
       </div>

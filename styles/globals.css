@@ -15,19 +15,31 @@ body {
   background-position: center;
   height: 400px;
   background-size: cover;
-  
+
 }
-.main_content .top_bg_overlay{
+
+.main_content .top_bg_overlay {
   position: relative;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(180deg, rgba(30, 30,40,0.93) 0%, rgba(30,30,40,0.96) 70%, rgba(30,30,40,0.99) 80%, #1e1e28 100%);
+  background-image: linear-gradient(180deg, rgba(30, 30, 40, 0.93) 0%, rgba(30, 30, 40, 0.96) 70%, rgba(30, 30, 40, 0.99) 80%, #1e1e28 100%);
+}
+
+.main_content .top_bg_overlay_light {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgb(171 171 220 / 93%) 0%, rgb(189 189 235 / 96%) 70%, rgb(202 202 255 / 99%) 80%, #e7e7ff 100%);
 }
 
 .profile_header {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 }
 
+.profile_light_header {
+  background: linear-gradient(159deg, rgb(228 228 255) 0%, rgb(186 180 255) 100%);
+
+}
 
 .expand {
   background: linear-gradient(159deg, rgba(45, 45, 58, 0.88) 0%, rgba(43, 43, 53, 0.88) 100%);
@@ -140,7 +152,7 @@ body {
 
 
 
-.pro_ssocial_main {
+.pro_social_main {
   margin-left: 0px !important;
   height: 50px;
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
@@ -150,7 +162,29 @@ body {
   z-index: 999;
 }
 
+.pro_social_main_light {
+  background: linear-gradient(159deg, rgb(228 228 255) 0%, rgb(186 180 255) 100%);
+  margin-left: 0px !important;
+  height: 50px;
+  -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
+  box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
+  width: 100%;
+  z-index: 999;
+}
+
+
 .header_banner {
+  background: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: 100% 10%;
+  position: relative;
+  -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+  box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.header_banner_light {
   background: url('/assets/bg.jpg');
   background-size: cover;
   background-position: 100% 10%;
@@ -170,6 +204,15 @@ body {
   background-image: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%);
 }
 
+.header_banner_light::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgb(203 203 240 / 90%) 15%, rgb(177 177 218 / 70%) 50%, rgb(111 111 156 / 70%) 100%);
+}
+
 .my-service-box {
   position: relative;
   z-index: 1;
@@ -177,6 +220,14 @@ body {
   -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+}
+
+.my-service-box-light {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 3px 8px 0 rgb(183 183 228 / 20%);
+  background: linear-gradient(159deg, #f7f7ff 0%, #d5d5f2 100%);
 }
 
 .recommendation {
@@ -250,9 +301,18 @@ body {
 
 
 .send_message {
+
+  margin-bottom: 30px;
+}
+
+.send_message_bg {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
-  margin-bottom: 30px;
+}
+
+.send_message_bg_light {
+  background: linear-gradient(159deg, #c3c3ec 0%, #e2e2f7 100%);
+  box-shadow: 0 3px 8px 0 rgb(127 127 168 / 20%);
 }
 
 .send_message .input_field {
@@ -361,12 +421,19 @@ footer {
   padding: 17px 30px;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 1px 4px 0 rgb(15 15 20/10%);
   font-size: 11px;
   color: #8c8c8e;
   transition: 0.55s ease-in-out;
   z-index: 9;
+}
+
+.footer_bg {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+}
+
+.footer_bg_light {
+  background: linear-gradient(159deg, #ddddff 0%, #a3a3cf 100%);
 }
 
 /* education and works history */
@@ -467,7 +534,7 @@ footer {
   }
 }
 
-.mobile_top{
+.mobile_top {
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
   padding: 0 30px;
   justify-content: space-between;
@@ -477,7 +544,7 @@ footer {
   top: 0;
 }
 
-.contact_card{
+.contact_card {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-;
+  ;
 }

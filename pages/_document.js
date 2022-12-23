@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { useEffect, useState } from "react";
 
 export default function Document() {
+
   return (
     <Html lang="en">
       <Head />
@@ -12,7 +14,7 @@ export default function Document() {
       />
       <title>Welcome to my website</title>
 
-      <body className="bg-[#191923] w-screen h-screen overflow-hidden relative">
+      <body className="bg-white dark:bg-[#191923] w-screen h-screen overflow-hidden relative">
         <Main />
         <NextScript />
       </body>
