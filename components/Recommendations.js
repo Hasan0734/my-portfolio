@@ -9,7 +9,7 @@ import SwiperPrev from "./SwiperPrev";
 import ActiveStar from "./ActiveStar";
 import InactiveStar from "./InactiveStar";
 
-export default function Recommendations() {
+export default function Recommendations({theme}) {
   const navigatePrevRef = useRef(null);
   const navigateNextRef = useRef(null);
   const sliderRef = useRef(null);
@@ -70,7 +70,7 @@ export default function Recommendations() {
         >
           <SwiperSlide>
             <div className="py-10">
-              <div className="recommendation p-5 lg:p-[30px]">
+              <div className={`${theme === "light" ? "recommendation_light" : "recommendation"} p-5 lg:p-[30px]`}>
                 <div className="relative">
                   <div>
                     <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
@@ -109,88 +109,7 @@ export default function Recommendations() {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="py-10">
-              <div className="recommendation p-5 lg:p-[30px]">
-                <div className="relative">
-                  <div>
-                    <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
-                      Jahid Hasan
-                    </h3>
-                    <h6 className="mt-[5px] text-[#646466] text-[11px]">
-                      Templato author
-                    </h6>
-                  </div>
-                </div>
-                <div className=" absolute right-8 -top-3">
-                  <img
-                    className="rounded-full w-[65px] h-[65px] "
-                    src="/assets/client.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="mt-3">
-                  <p className="text-[12px] text-[#8c8c8e] font-[300] tracking-wide text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio incidunt ullam voluptatibus illo aliquid vitae
-                    architecto quo atque nesciunt! Quidem, eligendi optio
-                    distinctio quaerat excepturi recusandae, assumenda nostrum
-                    ullam perspiciatis in maiores ipsum odio odit?
-                  </p>
-                  <div>
-                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
-                      <ActiveStar />
-                      <ActiveStar />
-                      <ActiveStar />
-                      <ActiveStar />
-                      <ActiveStar />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="py-10">
-              <div className="recommendation p-5 lg:p-[30px]">
-                <div className="relative">
-                  <div>
-                    <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
-                      Jahid Hasan
-                    </h3>
-                    <h6 className="mt-[5px] text-[#646466] text-[11px]">
-                      Templato author
-                    </h6>
-                  </div>
-                </div>
-                <div className=" absolute right-8 -top-3">
-                  <img
-                    className="rounded-full w-[65px] h-[65px] "
-                    src="/assets/client.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="mt-3">
-                  <p className="text-[12px] text-[#8c8c8e] font-[300] tracking-wide text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio incidunt ullam voluptatibus illo aliquid vitae
-                    architecto quo atque nesciunt! Quidem, eligendi optio
-                    distinctio quaerat excepturi recusandae, assumenda nostrum
-                    ullam perspiciatis in maiores ipsum odio odit?
-                  </p>
-                  <div>
-                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
-                      <ActiveStar />
-                      <ActiveStar />
-                      <ActiveStar />
-                      <InactiveStar />
-                      <InactiveStar />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+       
           <div className="flex gap-3 justify-end absolute bottom-0 right-0">
             <div
               onClick={handlePrev}

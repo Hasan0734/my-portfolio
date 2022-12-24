@@ -235,6 +235,11 @@ body {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
 }
+.recommendation_light {
+  position: relative;
+  background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
+  box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+}
 
 
 .swiper_prev::after {
@@ -546,5 +551,9 @@ footer {
 
 .contact_card {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-  ;
+  
+}
+.contact_card_light {
+  background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
+  
 }

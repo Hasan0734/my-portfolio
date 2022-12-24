@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const Education = () => {
+export default function Experience() {
   return (
     <div>
-      <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">
-        Education
-      </h3>
+      <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">Work History</h3>
       <div className="timeline_area">
         <div className="timeline">
           <div className="timeline-mark-light"></div>
@@ -151,6 +149,4 @@ const Education = () => {
       </div>
     </div>
   );
-};
-
-export default Education;
+}

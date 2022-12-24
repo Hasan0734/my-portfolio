@@ -32,7 +32,7 @@ const services = [
 export default function MyServices({theme}) {
   return (
     <div className="px-3">
-      <h3 className="dark:text-[#fafafc] text-[#20202a] textt-[12px] font-semibold">
+      <h3 className="dark:text-[#fafafc] text-[#20202a]  font-semibold">
         My Services
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-4">
@@ -44,7 +44,7 @@ export default function MyServices({theme}) {
             } rounded-sm`}
           >
             <div className="p-[30px]">
-              <h3 className="dark:text-[#fafafc] text-[#20202a] text-[12px] font-normal tracking-wide">
+              <h3 className="dark:text-[#fafafc] text-[#20202a] text-[12px] font-semibold tracking-wide">
                 {service.title}
               </h3>
               <p className="text-[12px] font-[300] dark:text-[#8c8c8e]  text-[#20202a] mt-3 mb-3 text-justify">

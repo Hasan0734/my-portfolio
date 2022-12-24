@@ -1,13 +1,19 @@
 import Link from "next/link";
 import React from "react";
 
-export default function PricePlans() {
+export default function PricePlans({theme}) {
   return (
     <>
       <div className="mt-6 px-3">
-        <h3 className="text-[#fafafc] textt-[12px] font-normal">Price Plans</h3>
+        <h3 className="dark:text-[#fafafc] text-[#20202a]  font-semibold">
+          Price Plans
+        </h3>
         <div className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-7 mt-6">
-          <div className="my-service-box rounded-sm">
+          <div
+            className={`${
+              theme === "light" ? "my-service-box-light" : "my-service-box"
+            } rounded-sm`}
+          >
             <div className="p-6 pb-3 text-center">
               <h2 className="text-[14px] font-semibold text-[#fafafc] mb-6">
                 Starter Price
@@ -113,7 +119,11 @@ export default function PricePlans() {
               </div>
             </div>
           </div>
-          <div className="my-service-box rounded-sm relative">
+          <div
+            className={`${
+              theme === "light" ? "my-service-box-light" : "my-service-box"
+            } rounded-sm relative`}
+          >
             <div className="absolute rotate-45 -right-[25px] top-5 bg-[#ffc107] ">
               <h2
                 className="
@@ -173,7 +183,7 @@ export default function PricePlans() {
                   </span>
                 </li>
                 <li className="flex justify-center items-center gap-1 mb-4">
-                   <svg
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -221,7 +231,11 @@ export default function PricePlans() {
               </div>
             </div>
           </div>
-          <div className="my-service-box rounded-sm relative">
+          <div
+            className={`${
+              theme === "light" ? "my-service-box-light" : "my-service-box"
+            } rounded-sm relative`}
+          >
             {/* <div className="absolute rotate-45 -right-[25px] top-5 bg-[#ffc107] ">
               <h2
                 className="

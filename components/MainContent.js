@@ -2,6 +2,7 @@ import Banner from "./Banner";
 import Branding from "./Branding";
 import ContactInformation from "./ContactInformation";
 import Education from "./Education";
+import Experience from "./Experience";
 import Footer from "./Footer";
 import GetInTouch from "./GetInTouch";
 import MyServices from "./MyServices";
@@ -30,7 +31,10 @@ export default function MainContent({toggle, setToggle, theme}) {
         <PricePlans theme={theme} />
         <Recommendations theme={theme} />
         <WorksSection theme={theme} />
-        <Education theme={theme} />
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-3">
+          <Education theme={theme} />
+          <Experience theme={ theme} />
+        </div>
         <ContactInformation theme={theme} />
         <GetInTouch theme={theme} />
         <Branding theme={theme} />
