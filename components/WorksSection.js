@@ -6,45 +6,57 @@ const WorksSection = () => {
   return (
     <div className="mt-6 px-3">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
-        <h3 className="text-[#fafafc] textt-[12px] font-normal">Works</h3>
+        <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">
+          Works
+        </h3>
         <ul className="flex flex-wrap gap-y-4  gap-x-4 items-center">
           <li
             onClick={() => setActive("All Categories")}
             className={`text-[11px] cursor-pointer ${
-              active === "All Categories" ? "text-[#fafafc]" : "text-[#8c8c8e]"
-            } uppercase font-semibold transition duration-300 hover:text-[#fafafc]`}
+              active === "All Categories"
+                ? "dark:text-[#fafafc] text-pink-600"
+                : "text-[#8c8c8e]"
+            } uppercase font-semibold transition duration-300 dark:hover:text-[#fafafc] hover:text-pink-600`}
           >
             All Categories
           </li>
           <li
             onClick={() => setActive("Web Templates")}
             className={`text-[11px] cursor-pointer ${
-              active === "Web Templates" ? "text-[#fafafc]" : "text-[#8c8c8e]"
-            } uppercase font-semibold transition duration-300 hover:text-[#fafafc]`}
+              active === "Web Templates"
+                ? "dark:text-[#fafafc] text-pink-600"
+                : "text-[#8c8c8e]"
+            } uppercase font-semibold transition duration-300 dark:hover:text-[#fafafc] hover:text-pink-600`}
           >
             Web Templates
           </li>
           <li
             onClick={() => setActive("Logos")}
             className={`text-[11px] cursor-pointer ${
-              active === "Logos" ? "text-[#fafafc]" : "text-[#8c8c8e]"
-            } uppercase font-semibold transition duration-300 hover:text-[#fafafc]`}
+              active === "Logos"
+                ? "dark:text-[#fafafc] text-pink-600"
+                : "text-[#8c8c8e]"
+            } uppercase font-semibold transition duration-300 dark:hover:text-[#fafafc] hover:text-pink-600`}
           >
             Logos
           </li>
           <li
             onClick={() => setActive("Drawings")}
             className={`text-[11px] cursor-pointer ${
-              active === "Drawings" ? "text-[#fafafc]" : "text-[#8c8c8e]"
-            } uppercase font-semibold  transition duration-300 hover:text-[#fafafc]`}
+              active === "Drawings"
+                ? "dark:text-[#fafafc] text-pink-600"
+                : "text-[#8c8c8e]"
+            } uppercase font-semibold  transition duration-300 dark:hover:text-[#fafafc] hover:text-pink-600`}
           >
             Drawings
           </li>
           <li
             onClick={() => setActive("UI Elements")}
             className={`text-[11px] cursor-pointer ${
-              active === "UI Elements" ? "text-[#fafafc]" : "text-[#8c8c8e]"
-            } uppercase font-semibold transition duration-300 hover:text-[#fafafc]`}
+              active === "UI Elements"
+                ? "dark:text-[#fafafc] text-pink-600"
+                : "text-[#8c8c8e]"
+            } uppercase font-semibold transition duration-300 dark:hover:text-[#fafafc] hover:text-pink-600`}
           >
             UI Elements
           </li>
@@ -112,11 +124,11 @@ const WorksSection = () => {
             </h4>
 
             <p className="text-[#8c8c8e] text-[12px] leading-5 text-justify mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit earum iste odit, fugiat numquam aut!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              earum iste odit, fugiat numquam aut!
             </p>
           </div>
         </div>
-     
       </div>
     </div>
   );

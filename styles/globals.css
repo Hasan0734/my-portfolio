@@ -235,6 +235,7 @@ body {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
 }
+
 .recommendation_light {
   position: relative;
   background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
@@ -330,6 +331,16 @@ body {
   height: 50px;
 }
 
+.send_message .input_field_light {
+  background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
+  border: none;
+  padding-right: 15px;
+  padding-left: 65px;
+  box-shadow: inset 0 1px 4px 0 rgb(15 15 20/10%);
+  transition: 0.4s ease-in-out;
+  height: 50px;
+}
+
 .send_message .input_label {
   text-align: center;
   color: #8c8c8e;
@@ -349,7 +360,30 @@ body {
   cursor: text;
 }
 
+.send_message .input_label_light {
+  text-align: center;
+  color: #8c8c8e;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #e7e7fb;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+  cursor: text;
+}
+
 .send_message .input_field:focus {
+  outline: none;
+}
+
+.send_message .input_field_light:focus {
   outline: none;
 }
 
@@ -358,7 +392,12 @@ body {
   color: #20202a;
 }
 
-.send_message textarea {
+.send_message .input_field_light:focus+.input_label_light {
+  background: #f9159a;
+  color: #c3c3ca;
+}
+
+.send_message .message {
   background: linear-gradient(159deg, #252532 0%, #23232d 100%);
   border: none;
   padding-right: 15px;
@@ -370,7 +409,18 @@ body {
 
 }
 
-.send_message .message {
+.send_message .message_light {
+  background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
+  border: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-shadow: inset 0 1px 4px 0 rgb(15 15 20/10%);
+  transition: 0.4s ease-in-out;
+  height: 150px;
+  border-left: solid 50px #f9159a;
+}
+
+.send_message .message_label {
   text-align: center;
   color: #8c8c8e;
   position: absolute;
@@ -389,14 +439,48 @@ body {
   cursor: text;
 }
 
-.send_message textarea:focus {
+.send_message .message_label_light {
+  text-align: center;
+  color: #8c8c8e;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #e7e7fb;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+  cursor: text;
+}
+
+.send_message .message:focus {
   outline: none;
   border-left: solid 50px #ffc107;
 }
 
-.send_message textarea:focus+.message {
+.send_message .message_light:focus {
+  outline: none;
+  border-left: solid 50px #f9159a;
+}
+
+.send_message .message_light {
+  outline: none;
+  border-left: solid 50px #e7e7fb;
+}
+
+.send_message .message:focus+.message_label {
   background: #FFC107;
   color: #20202a;
+}
+
+.send_message .message_light:focus+.message_label_light {
+  background: #f9159a;
+  color: #c3c3ca;
 }
 
 .message_success {
@@ -451,6 +535,10 @@ footer {
   position: relative;
 }
 
+.timeline_area_light {
+  position: relative;
+}
+
 .timeline_area::before {
   content: "";
   position: absolute;
@@ -461,14 +549,33 @@ footer {
   background: #191923;
 }
 
+.timeline_area_light::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  height: calc(100% - 10px);
+  width: 5px;
+  background: white;
+}
+
 .timeline_card {
   position: relative;
   margin-right: 45px;
-  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   padding: 30px;
   margin-bottom: 30px;
+}
+
+.timeline_card_bg {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
 }
+
+.timeline_card_bg_light {
+  background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
+  box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+}
+
 
 .cer_link {
   transition: 0.4s ease-in-out;
@@ -482,10 +589,22 @@ footer {
   transform: translateX(5px);
 }
 
-.timeline_card::after {
+.timeline_card_bg::after {
   height: 10px;
   width: 10px;
   background: rgba(43, 43, 53, 0.98);
+  transform: rotate(-135deg);
+  content: '';
+  position: absolute;
+  top: 11px;
+  border-top-right-radius: 50%;
+  right: -5px;
+}
+
+.timeline_card_bg_light::after {
+  height: 10px;
+  width: 10px;
+  background: #d7d7fffa;
   transform: rotate(-135deg);
   content: '';
   position: absolute;
@@ -518,8 +637,24 @@ footer {
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
 }
 
+.timeline-mark-mode {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 3px #ff07b0;
+  background: white;
+  box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
+}
+
 .timeline:hover .timeline-mark {
   animation: puls 1.5s infinite;
+}
+
+.timeline:hover .timeline-mark-mode {
+  animation: pulsLight 1.5s infinite;
 }
 
 @keyframes puls {
@@ -539,6 +674,23 @@ footer {
   }
 }
 
+@keyframes pulsLight {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 7, 172, 0.455);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 63, 175, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 63, 175, 0);
+  }
+}
+
 .mobile_top {
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
   padding: 0 30px;
@@ -551,9 +703,10 @@ footer {
 
 .contact_card {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-  
+
 }
+
 .contact_card_light {
   background: linear-gradient(159deg, #d8d8f2 0%, #d9d9fe 100%);
-  
+
 }

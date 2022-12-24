@@ -9,7 +9,7 @@ const InactiveStar = () => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-3 h-3"
+        className="w-3 h-3 dark:text-[#ffa500] text-pink-600"
       >
         <path
           strokeLinecap="round"

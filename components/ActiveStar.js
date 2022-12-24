@@ -7,7 +7,7 @@ const ActiveStar = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-3 h-3"
+        className="w-3 h-3 dark:text-[#ffa500] text-pink-600"
       >
         <path
           fillRule="evenodd"

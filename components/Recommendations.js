@@ -26,10 +26,10 @@ export default function Recommendations({theme}) {
 
   return (
     <div className="mt-6 px-3">
-      <h3 className="text-[#fafafc] textt-[12px] font-normal">
+      <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">
         Recommendations
       </h3>
-      <div className="mt-6">
+      <div className="">
         <Swiper
           ref={sliderRef}
           slidesPerView={3}
@@ -73,7 +73,7 @@ export default function Recommendations({theme}) {
               <div className={`${theme === "light" ? "recommendation_light" : "recommendation"} p-5 lg:p-[30px]`}>
                 <div className="relative">
                   <div>
-                    <h3 className="text-[14px] text-[#fafafc] font-semibold leading-5">
+                    <h3 className="text-[14px] dark:text-[#fafafc] text-[#20202a] font-semibold leading-5">
                       Jahid Hasan
                     </h3>
                     <h6 className="mt-[5px] text-[#646466] text-[11px]">
@@ -89,7 +89,7 @@ export default function Recommendations({theme}) {
                   />
                 </div>
                 <div className="mt-3">
-                  <p className="text-[12px] text-[#8c8c8e] font-[300] tracking-wide text-justify">
+                  <p className="text-[12px] text-[#8c8c8e] font-light tracking-wide text-justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Odio incidunt ullam voluptatibus illo aliquid vitae
                     architecto quo atque nesciunt! Quidem, eligendi optio
@@ -97,7 +97,7 @@ export default function Recommendations({theme}) {
                     ullam perspiciatis in maiores ipsum odio odit?
                   </p>
                   <div>
-                    <button className="bg-[#20202a] rounded-full mt-3 py-[6px] px-[15px] flex text-[#ffc107]">
+                    <button className="dark:bg-[#20202a] bg-gray-200 rounded-full mt-3 py-[6px] px-[15px] flex text-[#413b2a]">
                       <ActiveStar />
                       <ActiveStar />
                       <ActiveStar />

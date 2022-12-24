@@ -15,14 +15,18 @@ export default function GetInTouch({theme}) {
         <form action="">
           <div className="relative mb-[30px]">
             <input
-              className="w-full text-[#fafafc] input_field text-[12px]"
+              className={`w-full dark:text-[#fafafc] text-[#20202a] ${
+                theme === "light" ? "input_field_light" : "input_field"
+              } text-[12px]`}
               placeholder="Name"
               type="text"
               name="name"
               id="name"
             />
             <label
-              className="input_label flex justify-center items-center"
+              className={`${
+                theme === "light" ? " input_label_light" : "input_label"
+              } flex justify-center items-center`}
               htmlFor="name"
             >
               <svg
@@ -37,14 +41,18 @@ export default function GetInTouch({theme}) {
           </div>
           <div className="relative mb-[30px]">
             <input
-              className="w-full text-[#fafafc] input_field text-[12px]"
+              className={`w-full dark:text-[#fafafc] text-[#20202a] ${
+                theme === "light" ? "input_field_light" : "input_field"
+              } text-[12px]`}
               placeholder="Email"
               type="text"
               name="email"
               id="email"
             />
             <label
-              className="input_label flex justify-center items-center"
+              className={`${
+                theme === "light" ? " input_label_light" : "input_label"
+              } flex justify-center items-center`}
               htmlFor="email"
             >
               <svg
@@ -59,14 +67,18 @@ export default function GetInTouch({theme}) {
           </div>
           <div className="relative mb-[30px]">
             <textarea
-              className="w-full text-[#fafafc] text-[12px] py-3"
+              className={`w-full dark:text-[#fafafc] text-[#20202a] text-[12px] py-3 ${
+                theme === "light" ? "message_light" : "message"
+              }`}
               placeholder="message"
               type="text"
               name="message"
               id="message"
             />
             <label
-              className="message flex justify-center items-center"
+              className={`${
+                theme === "light" ? "message_label_light" : "message_label"
+              } flex justify-center items-center`}
               htmlFor="message"
             >
               <svg

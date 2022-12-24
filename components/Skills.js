@@ -159,11 +159,11 @@ export default function Skills({theme}) {
               <Link href="/">
                 <a
                   className="dark:text-[#8c8c8e] text-[#20202a] text-[10px] flex gap-2 items-center tracking-[1.5px]
-                   font-semibold inline-block uppercase"
+                   font-semibold uppercase"
                 >
                   Download
                   <svg
-                    className="w-3 h-3"
+                    className="w-3 h-3 text-pink-500 dark:text-[#8c8c8e]"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 512 512"

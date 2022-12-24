@@ -1,17 +1,31 @@
-import React from 'react'
+import React from "react";
 
-export default function Experience() {
+export default function Experience({ theme }) {
   return (
     <div>
-      <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">Work History</h3>
-      <div className="timeline_area">
+      <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">
+        Work History
+      </h3>
+      <div
+        className={`${
+          theme === "light" ? "timeline_area_light" : "timeline_area"
+        }`}
+      >
         <div className="timeline">
           <div className="timeline-mark-light"></div>
-          <div className="timeline-mark"></div>
-          <div className="education mt-4 timeline_card">
+          <div
+            className={`${
+              theme === "light" ? "timeline-mark-mode" : "timeline-mark"
+            }`}
+          ></div>
+          <div
+            className={`education mt-4 timeline_card ${
+              theme === "light" ? "timeline_card_bg_light" : "timeline_card_bg"
+            }`}
+          >
             <div className="flex md:flex-row flex-col justify-between">
               <div>
-                <h5 className="text-[14px] font-semibold text-[#fafafc]">
+                <h5 className="text-[14px] font-semibold dark:text-[#fafafc] text-[#20202a]">
                   Title of Section
                 </h5>
                 <div className="text-[#646466] text-[11px] mt-[5px] mb-[15px]">
@@ -20,24 +34,27 @@ export default function Experience() {
               </div>
               <div className="mb-[15px]">
                 <span
-                  className="text-[#646466] ml-auto bg-[#20202a] rounded-[15px]
+                  className="text-[#646466] ml-auto dark:bg-[#20202a] bg-gray-100 rounded-[15px]
                    px-[15px] py-[5px] text-[10px]"
                   style={{
-                    boxShadow: "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
+                    boxShadow:
+                      theme === "light"
+                        ? " 0 3px 8px 0 rgb(15 15 20 / 12%)"
+                        : "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
                   }}
                 >
                   Jan 2018 - May 2020
                 </span>
               </div>
             </div>
-            <p className="mb-4 text-[12px] text-[#8c8c8e] font-light tracking-wide">
+            <p className="mb-4 text-[12px] dark:text-[#8c8c8e] text-gray-700 font-light tracking-wide">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Laudantium, fugiat dolor. Optio facilis nemo eos eum distinctio?
               Sequi, sunt numquam?
             </p>
             <a
               href=""
-              className="text-[#ffc107] relative uppercase text-[10px] cer_link
+              className="dark:text-[#ffc107] text-pink-600 relative uppercase text-[10px] cer_link
               tracking-[1.5px] font-semibold gap-1 flex items-center"
             >
               <span>Diplome</span>
@@ -52,13 +69,27 @@ export default function Experience() {
             </a>
           </div>
         </div>
+      </div>
+      <div
+        className={`${
+          theme === "light" ? "timeline_area_light" : "timeline_area"
+        }`}
+      >
         <div className="timeline">
           <div className="timeline-mark-light"></div>
-          <div className="timeline-mark"></div>
-          <div className="education mt-4 timeline_card">
+          <div
+            className={`${
+              theme === "light" ? "timeline-mark-mode" : "timeline-mark"
+            }`}
+          ></div>
+          <div
+            className={`education mt-4 timeline_card ${
+              theme === "light" ? "timeline_card_bg_light" : "timeline_card_bg"
+            }`}
+          >
             <div className="flex md:flex-row flex-col justify-between">
               <div>
-                <h5 className="text-[14px] font-semibold text-[#fafafc]">
+                <h5 className="text-[14px] font-semibold dark:text-[#fafafc] text-[#20202a]">
                   Title of Section
                 </h5>
                 <div className="text-[#646466] text-[11px] mt-[5px] mb-[15px]">
@@ -67,24 +98,27 @@ export default function Experience() {
               </div>
               <div className="mb-[15px]">
                 <span
-                  className="text-[#646466] ml-auto bg-[#20202a] rounded-[15px]
+                  className="text-[#646466] ml-auto dark:bg-[#20202a] bg-gray-100 rounded-[15px]
                    px-[15px] py-[5px] text-[10px]"
                   style={{
-                    boxShadow: "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
+                    boxShadow:
+                      theme === "light"
+                        ? " 0 3px 8px 0 rgb(15 15 20 / 12%)"
+                        : "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
                   }}
                 >
                   Jan 2018 - May 2020
                 </span>
               </div>
             </div>
-            <p className="mb-4 text-[12px] text-[#8c8c8e] font-light tracking-wide">
+            <p className="mb-4 text-[12px] dark:text-[#8c8c8e] text-gray-700 font-light tracking-wide">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Laudantium, fugiat dolor. Optio facilis nemo eos eum distinctio?
               Sequi, sunt numquam?
             </p>
             <a
               href=""
-              className="text-[#ffc107] relative uppercase text-[10px] cer_link
+              className="dark:text-[#ffc107] text-pink-600 relative uppercase text-[10px] cer_link
               tracking-[1.5px] font-semibold gap-1 flex items-center"
             >
               <span>Diplome</span>
@@ -99,13 +133,27 @@ export default function Experience() {
             </a>
           </div>
         </div>
+      </div>
+      <div
+        className={`${
+          theme === "light" ? "timeline_area_light" : "timeline_area"
+        }`}
+      >
         <div className="timeline">
           <div className="timeline-mark-light"></div>
-          <div className="timeline-mark"></div>
-          <div className="education mt-4 timeline_card">
+          <div
+            className={`${
+              theme === "light" ? "timeline-mark-mode" : "timeline-mark"
+            }`}
+          ></div>
+          <div
+            className={`education mt-4 timeline_card ${
+              theme === "light" ? "timeline_card_bg_light" : "timeline_card_bg"
+            }`}
+          >
             <div className="flex md:flex-row flex-col justify-between">
               <div>
-                <h5 className="text-[14px] font-semibold text-[#fafafc]">
+                <h5 className="text-[14px] font-semibold dark:text-[#fafafc] text-[#20202a]">
                   Title of Section
                 </h5>
                 <div className="text-[#646466] text-[11px] mt-[5px] mb-[15px]">
@@ -114,24 +162,27 @@ export default function Experience() {
               </div>
               <div className="mb-[15px]">
                 <span
-                  className="text-[#646466] ml-auto bg-[#20202a] rounded-[15px]
+                  className="text-[#646466] ml-auto dark:bg-[#20202a] bg-gray-100 rounded-[15px]
                    px-[15px] py-[5px] text-[10px]"
                   style={{
-                    boxShadow: "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
+                    boxShadow:
+                      theme === "light"
+                        ? " 0 3px 8px 0 rgb(15 15 20 / 12%)"
+                        : "inset 0 3px 8px 0 rgb(15 15 20 / 20%)",
                   }}
                 >
                   Jan 2018 - May 2020
                 </span>
               </div>
             </div>
-            <p className="mb-4 text-[12px] text-[#8c8c8e] font-light tracking-wide">
+            <p className="mb-4 text-[12px] dark:text-[#8c8c8e] text-gray-700 font-light tracking-wide">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Laudantium, fugiat dolor. Optio facilis nemo eos eum distinctio?
               Sequi, sunt numquam?
             </p>
             <a
               href=""
-              className="text-[#ffc107] relative uppercase text-[10px] cer_link
+              className="dark:text-[#ffc107] text-pink-600 relative uppercase text-[10px] cer_link
               tracking-[1.5px] font-semibold gap-1 flex items-center"
             >
               <span>Diplome</span>
