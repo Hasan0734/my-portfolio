@@ -66,5 +66,5 @@ export default function ThemeControll() {
     }
   };
 
-  return <div className="hidden lg:block">{renderThemeChanger()}</div>;
+  return <div className="">{renderThemeChanger()}</div>;
 }

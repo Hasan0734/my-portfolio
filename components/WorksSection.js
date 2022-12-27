@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-const WorksSection = () => {
+const WorksSection = ({theme}) => {
   const [active, setActive] = useState("All Categories");
   return (
     <div className="mt-6 px-3">
@@ -67,8 +67,10 @@ const WorksSection = () => {
       grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
       >
         <div
-          className="rounded-md overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1
-        shadow-[0px_15px_20px_0px_rgba(0,0,0,0.68)] work_card cursor-pointer"
+          className={`rounded-sm overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 work_card
+        ${
+          theme === "light" ? " work_card_bg_light" : " work_card_bg"
+        } cursor-pointer `}
         >
           <div className="relative h-[200px] overflow-hidden">
             <img
@@ -113,17 +115,17 @@ const WorksSection = () => {
             </div>
           </div>
           <div className="p-3 py-5">
-            <h2 className="text-[#fafafc] text-xl font-semibold uppercase tracking-wider">
+            <h2 className="dark:text-[#fafafc] text-[#20202a] font-semibold uppercase tracking-wider">
               Hello world
             </h2>
-            <h4 className="text-[#ffc10785] text-[11px] font-semibold tracking-wider mt-2">
+            <h4 className="dark:text-[#ffc10785] text-pink-600 text-[11px] font-semibold tracking-wider mt-2">
               Tools:{" "}
-              <span className="text-[#8c8c8e]">
+              <span className="dark:text-[#8c8c8e] text-gray-600">
                 React, Tailwindcss, Node js, Swiper
               </span>
             </h4>
 
-            <p className="text-[#8c8c8e] text-[12px] leading-5 text-justify mt-3">
+            <p className="dark:text-[#8c8c8e] text-gray-500 text-[12px] leading-5 text-justify mt-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               earum iste odit, fugiat numquam aut!
             </p>
