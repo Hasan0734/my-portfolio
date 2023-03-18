@@ -8,7 +8,7 @@ export default function ProfileAvater({ setToggle, toggle, theme }) {
         className={`  ${
           theme === "light" ? "profile_light_header" : "profile_header"
         }  p-[30px] h-[235px] z-[9999] fixed w-[290px] min-w-[290px]
-            shadow-[0_1px_4px_0_rgba(15,15,20,0.1)]`}
+            shadow-[0_1px_4px_0_rgba(15,15,20,0.1)] `}
       >
         <div className="relative block lg:hidden">
           <div

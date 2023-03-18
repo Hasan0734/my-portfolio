@@ -14,7 +14,7 @@ export default function Document() {
       />
       <title>Welcome to my website</title>
 
-      <body className="bg-white dark:bg-[#191923] w-screen h-screen overflow-hidden relative">
+      <body className="bg-[#b5b5ff] dark:bg-[#191923] w-screen h-screen overflow-hidden relative">
         <Main />
         <NextScript />
       </body>

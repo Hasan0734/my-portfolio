@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -33,12 +37,13 @@ body {
 }
 
 .profile_header {
-  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  background: linear-gradient(159deg, rgba(37, 37, 50, 0.4) 0%, rgba(35, 35, 45, 0.4) 100%);
+  backdrop-filter: blur(10px);
 }
 
 .profile_light_header {
-  background: linear-gradient(159deg, rgb(228 228 255) 0%, rgb(186 180 255) 100%);
-
+  background: linear-gradient(159deg, rgba(228, 228, 255, 0.4) 0%, rgba(186, 180, 255,0.4) 100%);
+  backdrop-filter: blur(10px);
 }
 
 .expand {
@@ -155,21 +160,23 @@ body {
 .pro_social_main {
   margin-left: 0px !important;
   height: 50px;
-  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  background: linear-gradient(159deg, rgba(37, 37, 50, 0.4) 0%, rgba(35, 35, 45, 0.4) 100%);
   -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
   box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
   width: 100%;
   z-index: 999;
+  backdrop-filter: blur(10px);
 }
 
 .pro_social_main_light {
-  background: linear-gradient(159deg, rgb(228 228 255) 0%, rgb(186 180 255) 100%);
+  background: linear-gradient(159deg, rgba(228, 228, 255, 0.4) 0%, rgba(186, 180, 255,0.4) 100%);
   margin-left: 0px !important;
   height: 50px;
   -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
   box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
   width: 100%;
   z-index: 999;
+  backdrop-filter: blur(10px);
 }
 
 
@@ -328,7 +335,7 @@ body {
 }
 
 .send_message_bg_light {
-  background: linear-gradient(159deg, #c3c3ec 0%, #e2e2f7 100%);
+  background: linear-gradient(159deg, #c3c3ec 0%, #bebef0 100%);
   box-shadow: 0 3px 8px 0 rgb(127 127 168 / 20%);
 }
 
