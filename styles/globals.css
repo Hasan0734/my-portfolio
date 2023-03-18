@@ -334,7 +334,7 @@ body {
   box-shadow: 0 3px 8px 0 rgb(15 15 20/20%);
 }
 
-.send_message_bg_light {
+.send_message_bg_light { 
   background: linear-gradient(159deg, #c3c3ec 0%, #bebef0 100%);
   box-shadow: 0 3px 8px 0 rgb(127 127 168 / 20%);
 }

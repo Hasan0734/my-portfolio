@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import {motion} from 'framer-motion'
 
 const services = [
   {
@@ -31,7 +32,20 @@ const services = [
 
 export default function MyServices({theme}) {
   return (
-    <div className="px-3">
+    <motion.div
+    initial={{
+      // opacity: 0.5,
+      y: 40,
+    }}
+    whileInView={{
+      // opacity: 1,
+      y: 0,
+    }}
+    viewport={{ once: false }}
+    transition={{
+      delay: 0.2,
+      y: { duration: 0.4 },
+    }} className="px-3">
       <h3 className="dark:text-[#fafafc] text-[#20202a]  font-semibold">
         My Services
       </h3>
@@ -59,6 +73,6 @@ export default function MyServices({theme}) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

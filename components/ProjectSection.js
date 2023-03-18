@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import WorkCard from "./WorkCard";
 
-const WorksSection = ({ theme }) => {
+const ProjectSection = ({ theme }) => {
   const [active, setActive] = useState("All Categories");
   return (
     <div className="mt-6 px-3">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
         <h3 className="dark:text-[#fafafc] text-[#20202a] font-semibold">
-          Works
+          Projects
         </h3>
         <ul className="flex flex-wrap gap-y-4  gap-x-4 items-center">
           <li
@@ -74,4 +74,4 @@ const WorksSection = ({ theme }) => {
   );
 };
 
-export default WorksSection;
+export default ProjectSection;

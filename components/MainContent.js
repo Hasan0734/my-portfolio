@@ -9,7 +9,7 @@ import MyServices from "./MyServices";
 import PricePlans from "./PricePlans";
 import Recommendations from "./Recommendations";
 import Statics from "./Statics";
-import WorksSection from "./WorksSection";
+import ProjectSection from "./ProjectSection";
 
 export default function MainContent({toggle, setToggle, theme}) {
   return (
@@ -30,7 +30,7 @@ export default function MainContent({toggle, setToggle, theme}) {
         <MyServices theme={theme} />
         <PricePlans theme={theme} />
         <Recommendations theme={theme} />
-        <WorksSection theme={theme} />
+        <ProjectSection theme={theme} />
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-3">
           <Education theme={theme} />
           <Experience theme={ theme} />
